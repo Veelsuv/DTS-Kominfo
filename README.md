@@ -34,9 +34,27 @@ Views are located inside the views folder. The rails generate controller home to
 
 <b>Understanding Controllers</b><br>
 ![image](https://user-images.githubusercontent.com/49402463/131250169-bea7ca45-f9ea-45e9-a946-72802b8a7a24.png)<br>
-<u>How Pages are Displayed</u><br>
-
-
+How Pages are Displayed<br>
+When displaying a page, Rails returns views via its controllers.<br>
+![image](https://user-images.githubusercontent.com/49402463/131250292-2381afc4-0d05-49f6-8cb0-5253cd865d04.png)<br>
+```rails generate controller home top``` command creates a controller file named <b>home_controller.rb</b> with a top method. A method within a controller is also known as an <b>action.</b><br>
+![image](https://user-images.githubusercontent.com/49402463/131250359-48206f2d-21a2-43e9-8889-3ccd2c1feedf.png)<br>
+<br>
+<b>Understanding Action</br>
+The role of an action in a controller is to find a view from the views folder, then return it to the browser. The action looks for a folder with the same name as the controller (Home), then finds a file with the same name as the action (top).<br>
+![image](https://user-images.githubusercontent.com/49402463/131250403-2f65fc7c-53a7-4175-9191-9ef379251188.png)<br>
+<b>Understanding Routes</b><br>
+This completes the process for displaying a web page.<br>
+![image](https://user-images.githubusercontent.com/49402463/131250440-2ae8a5ad-3edb-4eaa-96f6-c67687c0a055.png)<br>
+<br>
+<b>The Role of Routes</b><br>
+While we return the view through the controller, the routing is the one responsible for connecting the browser to the controller. Make sure to understand that the process for displaying a page is in the following order: routes → controllers → views.<br>
+![image](https://user-images.githubusercontent.com/49402463/131250484-99cb8b67-6ab0-439a-b655-0b4c9045be36.png)<br><br>
+Routes can be described with <b>a routing table.</b> A route points to a specific action of a controller according to the URL requested. When a URL is entered in the browser, it calls for a matching action in the controller based on the URL.<br>
+![image](https://user-images.githubusercontent.com/49402463/131250529-f9d85ecb-83fd-4862-a936-4ad5a02630e3.png)<br><br>
+<b>The Routes File</b><br>
+Routes are defined in the config/routes.rb file in the following syntax: get "URL" => "controller#action". For instance, as shown in the image below, the URL "localhost:3000/home/top" points to the top action in the Home controller.<br>
+![image](https://user-images.githubusercontent.com/49402463/131250572-a9274557-e732-45e9-a54f-77fa6c8fbb93.png)<br><br>
 
 
 
