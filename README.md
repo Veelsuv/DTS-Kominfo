@@ -55,6 +55,13 @@ Routes can be described with <b>a routing table.</b> A route points to a specifi
 <b>The Routes File</b><br>
 Routes are defined in the config/routes.rb file in the following syntax: get "URL" => "controller#action". For instance, as shown in the image below, the URL "localhost:3000/home/top" points to the top action in the Home controller.<br>
 ![image](https://user-images.githubusercontent.com/49402463/131250572-a9274557-e732-45e9-a54f-77fa6c8fbb93.png)<br><br>
+<b>Routing Errors</b><br>
+you can't access a URL that isn't written in the routes file.<br>
+![image](https://user-images.githubusercontent.com/49402463/131250665-cc75a14d-790b-4387-8d17-7104e28c30bf.png)<br><br>
+<b>Changing a Route</b><br>
+You can change the URL of the Top page by editing its route. Once you modify the route, you can access the Top page via localhost:3000/top. Even when the URL is changed, the view file (top.html.erb) is still displayed in the browser as long as the home#top remains the same.</br>
+![image](https://user-images.githubusercontent.com/49402463/131250727-2487528e-e870-4958-8371-5b13cd576d3c.png)<br><br>
+![image](https://user-images.githubusercontent.com/49402463/131250735-73bb1ebf-ae38-4c9d-adfa-4cf816b326d3.png)<br><br>
 
 
 
